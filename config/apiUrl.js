@@ -1,4 +1,6 @@
-let ipUrl = 'http://127.0.0.1:7001/default/'
+console.log(process.env.NODE_ENV)
+const ip = process.env.NODE_ENV === 'development' ?  'http://127.0.0.1:7001' : 'http://120.78.80.132/:7001'
+let ipUrl = `${ip}/default/`;
 let servicePath = {
     getArticalList: ipUrl + 'getArticleList', //  首页文章列表接口
     getArticalById: ipUrl + 'getArticleById/',  // 文章详细页内容接口 ,需要接收参数
